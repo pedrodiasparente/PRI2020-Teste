@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Classes Nível 1
+  h3 Isto é uma lista das Classes Nível 1
+  table.w3-table-all
+    tr
+      th Codigo
+      th Titulo
+    each c in classes
+      tr
+        td
+          a(href=('/' + c.codigo)) #{c.codigo}
+        td= c.titulo

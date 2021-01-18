@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1 Classe #{c.codigo}
+  ul
+    li Nível #{c.nivel}
+    li= c.codigo
+    li= c.titulo
+  h3 Descrição
+  p= c.descricao
+  if c.nivel != 3
+    h1 Filhos
+    table.w3-table-all
+      tr
+        th Codigo
+        th Titulo
+      each f in c.filhos
+        tr
+          td
+            a(href=('/' + f.codigo)) #{f.codigo}
+          td= f.titulo
+  if r != null
+    h1 Relacionados
+    table.w3-table-all
+      tr
+        th Codigo
+        th idRel
+        th Titulo
+      each f in r
+        if (f.idRel == 'eCruzadoCom' || f.idRel == 'eComplementarDe' || f.idRel == 'eSuplementoDe' || f.idRel == 'eSuplementoPara')
+          tr
+            td
+              a(href=('/' + f.codigo)) #{f.codigo}
+            td= f.idRel
+            td= f.titulo
+  if(c.nivel != 1)
+    a(href=('/') + c.codigo.slice(0,c.codigo.lastIndexOf('.')))
+      p Voltar à classe a cima
+  a(href=('/'))
+    p Voltar ao menu principal

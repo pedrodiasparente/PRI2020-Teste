@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PR SYSTEM "../../Random/PR.dtd">
+<PR>
+    <meta>
+        <key>PRI_TESTE_ProjectRec</key>
+        <title>Project Record TESTE PRI</title>
+        <bdate>18 Janeiro 2021</bdate>
+        <edate>18 Janeiro 2021</edate>
+        <supervisor url="www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <workteam>
+        <worker num="A85919">
+            <name>Pedro Dias Parente</name>
+            <email>a85919@alunos.uminho.pt</email>
+        </worker>
+    </workteam>
+    <abstract>
+        <p>
+            <b>Exercício1: </b>
+        </p>
+        <p>
+            Para tratar do ficheiro json usei regex para selecionar todos os refs para substituir por "_id" e também usei regex para substituir as '/' por '_'. O resto dos erros como as falta de vírgulas e aspas corrigi à mão.
+        </p>
+        <p>
+            Para importar a BD para o MongoDB usei, por uma questão de facilidade, o MongoCompass que tem um opção para importar ficheiros JSON. Mas sei que o comando para fazer o mesmo é mongoimport --db MyCasamentos --collection casamentos --type json --file .\casamentos.json --jsonArray
+        </p>
+        <p>
+            <b>Exercício2: </b>
+        </p>
+        <p>
+            O número de processos de descendência da classe 750 são 17.
+        </p>
+        <p>
+            O número de subprocessos no catálogo inteiro é 116.
+        </p>
+        <p>
+            O número de processos de descendência da classe 750.30 são 5.
+        </p>
+        <p>
+            O número de processos que estão relacionados com classe 750.30.001 são 6.
+        </p>
+        <p>
+            <b>ROTAS:</b>
+        </p>
+        <p>
+            Para aceder ao site basta conectar-se http://localhost:8001/
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="PR.xml">
+            Report (XML)
+        </link>
+        <link url="ex1/api-server">
+            Pasta do api-server do exercício1
+        </link>
+        <link url="ex2/app-server">
+            Pasta do app-server do exercício
+        </link>
+        <link url="ex2/alinea1.txt">
+            Alinea 1, JSON
+        <link>
+    </deliverables>
+</PR>
